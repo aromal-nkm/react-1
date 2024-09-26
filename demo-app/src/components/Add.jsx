@@ -1,23 +1,20 @@
 import React from 'react'
-
+// import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 const Add = () => {
   return (
-    <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"/>
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <Box
+    component="form"
+    sx={{ '& > :not(style)': { m: 1, width: '25ch' } }}
+    noValidate
+    autoComplete="off"
+  >
+    <TextField id="outlined-basic" label="EID" variant="outlined" /><br />
+    <TextField id="filled-basic" label="Employeename" variant="filled" /><br />
+    <TextField id="standard-basic" label="Designation" variant="standard" /><br />
+    <TextField id="standard-basic" label="Location" variant="standard" />
+  </Box>
   )
 }
 
