@@ -1,8 +1,11 @@
 import { Button, TextField } from '@mui/material'
 import React, { useState } from 'react'
 
-const Add = () => {
-  const [employee,setEmployee]=useState({eId:'1',eName:'akhil',eDept:'hr',eLocn:'tvm'})
+const Add = ({person}) => {
+  const [employee,setEmployee]=useState({eId:person.EID,
+    eName:person.EName,
+    eDept:person.Designation,
+    eLocn:person.Locn})
   let fetchvalue=(e)=>{
 
     // console.log(e)
@@ -13,17 +16,17 @@ const Add = () => {
   }
   return ( <div>
     <h2>NEW EMPLOYEE</h2>
-    <TextField  id="standard-basic" label="Employee ID" name='eId'
-    //  value={employee.eId} 
-     variant="standard" onChange={fetchvalue} /><br />
-    <TextField  id="standard-basic" label="Employee Name" variant="standard" name='eName' 
-    // value={employee.eName} 
+    <TextField  id="outlined-basic" label="Employee ID" name='eId'
+   value={employee.eId} 
+     variant="outlined" onChange={fetchvalue} /><br />
+    <TextField  id="outlined-basic" label="Employee Name" variant="outlined" name='eName' 
+    value={employee.eName} 
      onChange={fetchvalue} /><br />
-    <TextField   id="standard-basic" label="Employee dept" variant="standard" name='eDept' 
-    // value={employee.eDept} 
+    <TextField   id="outlined-basic" label="Employee dept" variant="outlined" name='eDept' 
+    value={employee.eDept} 
     onChange={fetchvalue}/><br />
-    <TextField   id="standard-basic" label="Employee location" variant="standard" name='eLocn' 
-    // value={employee.eLocn}
+    <TextField   id="outlined-basic" label="Employee location" variant="outlined" name='eLocn' 
+    value={employee.eLocn}
       onChange={fetchvalue}/> <br /><br />
     <Button onClick={sendData} variant="contained">submit</Button> <br /></div>
   )

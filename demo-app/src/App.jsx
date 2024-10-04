@@ -16,7 +16,7 @@ function App() {
     <Nav></Nav>
    <Routes>
     <Route path='/' element= {<Home/>}></Route>
-    <Route path='/add' element={<Add/>}></Route>
+    <Route path='/add' element={<Add person={{EID:1,EName:"AKHIL",Designation:"Manager",Locn:"TVM"}} />}></Route>
 
    </Routes>
     
